@@ -1,7 +1,8 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:owanto_app/src/data/model/order.dart';
 import 'package:owanto_app/src/data/model/product.dart';
 import 'package:owanto_app/src/router/router_path.dart';
-
 import 'package:owanto_app/src/view/screen/add_address_screen.dart';
 import 'package:owanto_app/src/view/screen/change_pass_screen.dart';
 import 'package:owanto_app/src/view/screen/checkout_screen.dart';
@@ -16,16 +17,16 @@ import 'package:owanto_app/src/view/screen/otp_screen.dart';
 import 'package:owanto_app/src/view/screen/recent_view_screen.dart';
 import 'package:owanto_app/src/view/screen/register_screen.dart';
 import 'package:owanto_app/src/view/screen/splash_screen.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
-class Routerr{
-  static RouteFactory onGenerateRouter = (RouteSettings settings){
-    switch(settings.name){
+class Routes {
+  static RouteFactory onGenerateRouter = (RouteSettings settings) {
+    switch (settings.name) {
       case DetailProductScreens:
         final arg = settings.arguments! as Product;
-        return _generateMaterialRoute(DetailProductScreen(product: arg,));
+        return _generateMaterialRoute(DetailProductScreen(
+          product: arg,
+        ));
       case CheckoutScreens:
         return _generateMaterialRoute(CheckoutScreen());
       case ChoiceAddressScreens:
@@ -38,10 +39,14 @@ class Routerr{
         return _generateMaterialRoute(MyOrderScreen());
       case OrderDetailScreens:
         final arg = settings.arguments! as Order;
-        return _generateMaterialRoute(OrderDetailScreen(order: arg,));
+        return _generateMaterialRoute(OrderDetailScreen(
+          order: arg,
+        ));
       case RecentViewScreens:
         final arg = settings.arguments! as List<Product>;
-        return _generateMaterialRoute(RecentViewScreen(listRecentProduct: arg,));
+        return _generateMaterialRoute(RecentViewScreen(
+          listRecentProduct: arg,
+        ));
       case SplashScreens:
         return _generateMaterialRoute(SplashScreen());
       case LoginScreens:
@@ -55,14 +60,19 @@ class Routerr{
       case OtpScreens:
         return _generateMaterialRoute(OtpScreen());
       default:
-        return _generateMaterialRoute(Center(child: Text("On Unknown Router",style: TextStyle(
-          color: Colors.red,
-          fontSize: 25,
-        ),),));
+        return _generateMaterialRoute(Center(
+          child: Text(
+            "On Unknown Router",
+            style: TextStyle(
+              color: Colors.red,
+              fontSize: 25,
+            ),
+          ),
+        ));
     }
   };
 }
 
 PageTransition _generateMaterialRoute(Widget screen) {
-  return PageTransition(child: screen,type: PageTransitionType.fade);
+  return PageTransition(child: screen, type: PageTransitionType.fade);
 }

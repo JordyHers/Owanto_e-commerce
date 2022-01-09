@@ -1,8 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:owanto_app/src/const/app_font.dart';
 import 'package:owanto_app/src/data/model/product.dart';
-import 'package:owanto_app/src/view/screen/component/carttab/cart_item.dart';
 import 'package:owanto_app/src/view/screen/component/hometab/cart_product.dart';
-import 'package:flutter/material.dart';
 
 class RecentViewScreen extends StatelessWidget {
   final List<Product>? listRecentProduct;
@@ -24,7 +23,7 @@ class RecentViewScreen extends StatelessWidget {
           ),
         ),
         title: Text(
-          "Recent view",
+          "commentaires",
           style: AppFont.semiBold.copyWith(
             fontWeight: FontWeight.bold,
           ),
@@ -34,8 +33,7 @@ class RecentViewScreen extends StatelessWidget {
         shrinkWrap: true,
         padding: EdgeInsets.all(0.0),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            childAspectRatio: 80/140),
+            crossAxisCount: 2, childAspectRatio: 80 / 140),
         itemCount: listRecentProduct?.length,
         itemBuilder: (_, index) {
           Product? product = listRecentProduct![index];

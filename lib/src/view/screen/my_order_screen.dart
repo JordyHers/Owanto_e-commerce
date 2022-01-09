@@ -1,15 +1,15 @@
+import 'package:flutter/material.dart';
 import 'package:owanto_app/src/const/app_font.dart';
 import 'package:owanto_app/src/data/model/order.dart';
 import 'package:owanto_app/src/router/router_path.dart';
 import 'package:owanto_app/src/view/screen/component/myorder/order_product.dart';
 import 'package:owanto_app/src/viewmodel/cart_viewmodel.dart';
-import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class MyOrderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final cartViewModel = Provider.of<CartViewModel>(context,listen: false);
+    final cartViewModel = Provider.of<CartViewModel>(context, listen: false);
 
     return Scaffold(
       body: SafeArea(
@@ -31,7 +31,7 @@ class MyOrderScreen extends StatelessWidget {
                     size: 20,
                   )),
               Text(
-                "My Orders",
+                "Mes Commandes",
                 style: AppFont.bold.copyWith(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
@@ -43,19 +43,19 @@ class MyOrderScreen extends StatelessWidget {
               Expanded(
                 child: ListView.builder(
                   itemCount: cartViewModel.listOrder.length,
-                  itemBuilder: (_,index){
+                  itemBuilder: (_, index) {
                     Order order = cartViewModel.listOrder[index];
                     return Padding(
-                      padding: const EdgeInsets.only(bottom: 20),
-                      child: InkWell(
-                        onTap: (){
-                          Navigator.pushNamed(context, OrderDetailScreens,arguments: order);
-                        },
-                        child: OrderProduct(
-                          order: order,
-                        ),
-                      )
-                    );
+                        padding: const EdgeInsets.only(bottom: 20),
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, OrderDetailScreens,
+                                arguments: order);
+                          },
+                          child: OrderProduct(
+                            order: order,
+                          ),
+                        ));
                   },
                 ),
               )

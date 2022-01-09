@@ -1,8 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:owanto_app/src/const/app_font.dart';
 import 'package:owanto_app/src/router/router_path.dart';
-import 'package:owanto_app/src/view/screen/choice_address_screen.dart';
 import 'package:owanto_app/src/viewmodel/product_viewmodel.dart';
-import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class PersonalTab extends StatefulWidget {
@@ -12,16 +11,16 @@ class PersonalTab extends StatefulWidget {
 
 class _PersonalTabState extends State<PersonalTab> {
   Map<String, String> listInfomation = {
-    'My orders': 'Already have 12 orders',
-    'Shipping addresses': '3 address',
-    'Payment methods': 'Visa ',
-    'My reviews': 'Reviews for 4 items',
-    'Recent View': 'Reviews for 4 items',
+    'Mes Commandes': 'Vous avez 2 commandes en cours',
+    'Addresse de Livraison': '3 address',
+    'Mode de Paiement': 'Visa, Airtel Money ',
+    'Commentaires': '3 Retours de produits',
+    'Langues': 'Francais - Anglais',
   };
 
   @override
   Widget build(BuildContext context) {
-    var productVM = Provider.of<ProductViewModel>(context,listen: false);
+    var productVM = Provider.of<ProductViewModel>(context, listen: false);
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       child: Column(
@@ -35,13 +34,7 @@ class _PersonalTabState extends State<PersonalTab> {
               Container(
                 width: 70,
                 height: 70,
-                decoration: BoxDecoration(
-                 image: DecorationImage(
-                   image: NetworkImage('https://st3.depositphotos.com/1037987/15097/i/600/depositphotos_150975580-stock-photo-portrait-of-businesswoman-in-office.jpg'),
-                   fit: BoxFit.cover
-                 ),
-                  shape: BoxShape.circle,
-                ),
+                child: Icon(Icons.person),
               ),
               SizedBox(
                 width: 20,
@@ -52,7 +45,7 @@ class _PersonalTabState extends State<PersonalTab> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Long Khoa",
+                      "RT56BC",
                       style: AppFont.semiBold.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
@@ -61,7 +54,7 @@ class _PersonalTabState extends State<PersonalTab> {
                       height: 5,
                     ),
                     Text(
-                      "hodanglongkhoa123@gmail.com",
+                      "email:",
                       style: AppFont.medium.copyWith(
                           fontWeight: FontWeight.w500,
                           color: Colors.grey,
@@ -72,26 +65,27 @@ class _PersonalTabState extends State<PersonalTab> {
               )
             ],
           ),
-
           Expanded(
             child: ListView.separated(
               shrinkWrap: true,
               itemCount: listInfomation.length,
-              separatorBuilder: (BuildContext context, int index)  => Divider(),
+              separatorBuilder: (BuildContext context, int index) => Divider(),
               itemBuilder: (BuildContext context, int index) {
                 var title = listInfomation.keys.elementAt(index);
                 var subtitle = listInfomation.values.elementAt(index);
                 return InkWell(
                   onTap: () {
-                    switch(index){
+                    switch (index) {
                       case 0:
-                         Navigator.pushNamed(context, MyOrderScreens);
+                        Navigator.pushNamed(context, MyOrderScreens);
                         break;
                       case 1:
                         Navigator.pushNamed(context, ChoiceAddressScreens);
                         break;
-                      case 4:
-                        Navigator.pushNamed(context, RecentViewScreens,arguments: productVM.listRecent);
+
+                      case 3:
+                        Navigator.pushNamed(context, RecentViewScreens,
+                            arguments: productVM.listRecent);
                         break;
                     }
                   },
@@ -99,14 +93,14 @@ class _PersonalTabState extends State<PersonalTab> {
                     contentPadding: EdgeInsets.all(0.0),
                     title: Text(
                       title,
-                      style: AppFont.semiBold.copyWith(
-                          fontWeight: FontWeight.bold, fontSize: 17),
+                      style: AppFont.semiBold
+                          .copyWith(fontWeight: FontWeight.w500, fontSize: 16),
                     ),
                     subtitle: Text(
                       subtitle,
                       style: AppFont.regular.copyWith(
                           fontWeight: FontWeight.w100,
-                          fontSize: 13,
+                          fontSize: 12,
                           color: Colors.grey),
                     ),
                     trailing: IconButton(
@@ -120,7 +114,6 @@ class _PersonalTabState extends State<PersonalTab> {
                   ),
                 );
               },
-
             ),
           )
         ],

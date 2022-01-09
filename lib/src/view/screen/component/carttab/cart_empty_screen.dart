@@ -5,7 +5,7 @@ class CartEmptyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("Rỗng"),
+        child: Text("Votre panier est vide !"),
       ),
     );
   }
