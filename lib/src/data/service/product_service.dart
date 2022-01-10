@@ -9,7 +9,7 @@ List<Inventory>? inventories = [
 
 class ProductService {
   List<Product> listProduct = [
-    for (int i = 0; i <= 10; i++)
+    for (int i = 0; i <= 7; i++)
       Product(
           id: '$i',
           title: "Robe $i",
@@ -19,7 +19,7 @@ class ProductService {
           createAt: "10/10/2011",
           isLike: false,
           urlImage: [
-            'https://images.pexels.com/photos/2657594/pexels-photo-2657594.jpeg?cs=srgb&dl=pexels-vinicius-altava-2657594.jpg&fm=jpg',
+            "assets/owanto/model_$i.png",
           ],
           inventory: inventories,
           category: "Dress"),

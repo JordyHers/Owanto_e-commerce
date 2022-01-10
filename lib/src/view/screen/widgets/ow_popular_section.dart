@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:owanto_app/src/data/model/product.dart';
+import 'package:owanto_app/src/view/screen/widgets/ow_product_item_case.dart';
+import 'package:owanto_app/src/viewmodel/product_viewmodel.dart';
+import 'package:provider/provider.dart';
 
 class PopularSection extends StatelessWidget {
   const PopularSection({
@@ -7,28 +11,17 @@ class PopularSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ProductViewModel prductVM = Provider.of(context, listen: false);
     return SizedBox(
-        height: 300,
-        child: ListView(
+        height: 400,
+        child: ListView.builder(
+          itemCount: prductVM.listProduct?.length,
+          padding: EdgeInsets.all(0.0),
           scrollDirection: Axis.horizontal,
-          children: [
-            for (int i = 0; i <= 7; i++)
-              Container(
-                height: 200,
-                margin: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-                child: Image.asset("assets/owanto/model_$i.png"),
-                // child: Column(
-                //   children: [
-                //     Image.asset("assets/owanto/model_$i.png"),
-                //     Text(
-                //       "Model $i",
-                //       style: AppFont.mini_white
-                //           .copyWith(color: Colors.black, fontSize: 8),
-                //     )
-                //   ],
-                // )
-              )
-          ],
+          itemBuilder: (_, index) {
+            Product? product = prductVM.listProduct![index];
+            return ProductItemCase(product: product);
+          },
         ));
   }
 }

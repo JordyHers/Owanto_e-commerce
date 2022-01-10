@@ -4,6 +4,7 @@ import 'package:owanto_app/src/view/screen/widgets/ow_collection_image_section.d
 import 'package:owanto_app/src/view/screen/widgets/ow_header_title.dart';
 import 'package:owanto_app/src/view/screen/widgets/ow_main_image_section.dart';
 import 'package:owanto_app/src/view/screen/widgets/ow_popular_section.dart';
+import 'package:owanto_app/src/view/screen/widgets/ow_tuniques_section.dart';
 
 import 'component/ow_search_bar/ow_search_bar.dart';
 
@@ -24,16 +25,18 @@ class _HomeTabState extends State<HomeTab> {
               const CustomSearchBar(),
               MainImageSection(),
               const SizedBox(height: 10),
-              HeaderBody(
+              const HeaderBody(
                   title: "Nouvelle Collection",
                   description: "Decouvrez nos nouvelles tenues "),
               CollectionImageSection(),
               const SizedBox(height: 10),
               ArticlesTitlesSection(),
-              HeaderBody(
+              const HeaderBody(
                   title: "Populaire",
                   description: "Decouvrez les plus populaires "),
               PopularSection(),
+              const SizedBox(height: 10),
+              TuniqueSection(),
               const SizedBox(height: 200)
             ],
           ),
