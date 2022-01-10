@@ -10,7 +10,7 @@ class FavoriteTab extends StatelessWidget {
       print(element.isLike);
     });
     return SafeArea(
-      child: Container(child: Center(child: Text(" Aucun produit disponible !"))
+      child: Center(child: Text(" Aucun produit disponible !")
           // child: FavoriteScroll(),
           ),
     );

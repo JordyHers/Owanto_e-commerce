@@ -18,32 +18,32 @@ class ArticlesTitlesSection extends StatelessWidget {
           children: [
             Text(
               "Femmes",
-              style: AppFont.medium,
+              style: AppFont.medium.copyWith(fontSize: 19),
             ),
             const SizedBox(height: 20),
             Text(
               "Robes",
-              style: AppFont.medium,
+              style: AppFont.medium.copyWith(fontSize: 19),
             ),
             const SizedBox(height: 20),
             Text(
               "Chaussures",
-              style: AppFont.medium,
+              style: AppFont.medium.copyWith(fontSize: 19),
             ),
             const SizedBox(height: 20),
             Text(
               "Combinaisons",
-              style: AppFont.medium,
+              style: AppFont.medium.copyWith(fontSize: 19),
             ),
             const SizedBox(height: 20),
             Text(
               "Pareo",
-              style: AppFont.medium,
+              style: AppFont.medium.copyWith(fontSize: 19),
             ),
             const SizedBox(height: 20),
             Text(
               "Nouvelle Collection",
-              style: AppFont.medium,
+              style: AppFont.medium.copyWith(fontSize: 19),
             ),
           ],
         ),

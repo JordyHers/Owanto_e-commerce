@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:owanto_app/src/view/screen/widgets/ow_articles_titles_section.dart';
 import 'package:owanto_app/src/view/screen/widgets/ow_collection_image_section.dart';
+import 'package:owanto_app/src/view/screen/widgets/ow_header_title.dart';
 import 'package:owanto_app/src/view/screen/widgets/ow_main_image_section.dart';
+import 'package:owanto_app/src/view/screen/widgets/ow_popular_section.dart';
 
 import 'component/ow_search_bar/ow_search_bar.dart';
 
@@ -22,11 +24,16 @@ class _HomeTabState extends State<HomeTab> {
               const CustomSearchBar(),
               MainImageSection(),
               const SizedBox(height: 10),
+              HeaderBody(
+                  title: "Nouvelle Collection",
+                  description: "Decouvrez nos nouvelles tenues "),
               CollectionImageSection(),
               const SizedBox(height: 10),
               ArticlesTitlesSection(),
-              //  BodyPage(),
-              // HeaderPage(),
+              HeaderBody(
+                  title: "Populaire",
+                  description: "Decouvrez les plus populaires "),
+              PopularSection(),
               const SizedBox(height: 200)
             ],
           ),
