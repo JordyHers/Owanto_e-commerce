@@ -22,6 +22,7 @@ class _HomeTabState extends State<HomeTab> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              //ALL WIDGETS ARE FOUND IN WIDGETS FOLDER
               const CustomSearchBar(),
               MainImageSection(),
               const SizedBox(height: 10),
