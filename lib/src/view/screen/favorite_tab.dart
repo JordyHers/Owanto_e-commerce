@@ -14,7 +14,7 @@ class FavoriteTab extends StatelessWidget {
       child: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
           HeaderPage(),
-          const SizedBox(height: 20),
+          const SizedBox(height: 50),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -25,7 +25,7 @@ class FavoriteTab extends StatelessWidget {
           Center(
             child: Padding(
               padding:
-                  EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 60),
+                  EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 60),
               child: Text(
                 "Vous pouvez faoriser une tenue en cliquant sur le bouton j'aime ",
                 style: TextStyle(fontSize: 10, fontWeight: FontWeight.w400),

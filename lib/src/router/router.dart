@@ -7,6 +7,7 @@ import 'package:owanto_app/src/view/screen/add_address_screen.dart';
 import 'package:owanto_app/src/view/screen/change_pass_screen.dart';
 import 'package:owanto_app/src/view/screen/checkout_screen.dart';
 import 'package:owanto_app/src/view/screen/choice_address_screen.dart';
+import 'package:owanto_app/src/view/screen/dash_board_screen.dart';
 import 'package:owanto_app/src/view/screen/detail_product_screen.dart';
 import 'package:owanto_app/src/view/screen/forgot_pass_screen.dart';
 import 'package:owanto_app/src/view/screen/login_screen.dart';
@@ -29,6 +30,9 @@ class Routes {
         ));
       case CheckoutScreens:
         return _generateMaterialRoute(CheckoutScreen());
+      case DashBoardScreens:
+        return _generateMaterialRoute(DashBoardScreen());
+
       case ChoiceAddressScreens:
         return _generateMaterialRoute(ChoiceAddressScreen());
       case AddAddressScreens:

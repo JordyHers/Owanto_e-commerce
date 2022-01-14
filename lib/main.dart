@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:owanto_app/src/const/app_colors.dart';
 import 'package:owanto_app/src/router/router.dart';
-import 'package:owanto_app/src/view/screen/dash_board_screen.dart';
+import 'package:owanto_app/src/view/screen/login_screen.dart';
 import 'package:owanto_app/src/viewmodel/address_viewmodel.dart';
 import 'package:owanto_app/src/viewmodel/auth_viemodel.dart';
 import 'package:owanto_app/src/viewmodel/bottom_navigate_provider.dart';
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.black,
         ),
         onGenerateRoute: Routes.onGenerateRouter,
-        home: DashBoardScreen(),
+        home: LoginScreen(),
       ),
     );
   }
