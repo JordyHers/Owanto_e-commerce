@@ -22,9 +22,20 @@ https://user-images.githubusercontent.com/49708438/167256470-9251f9f9-207d-4d6b-
 
     .
     ├── src                    
-    │   ├── benchmarks          # Load and stress tests
-    │   ├── integration         # End-to-end, integration tests (alternatively `e2e`)
-    │   └── unit                # Unit tests
+    │   ├── const               # contains all the constants
+             └── ...
+    │   ├── data               # contains all the constants
+             └── model
+             └── service
+    │   ├── router               # contains all the constants
+             └── ...
+    │   ├── view               # contains all the constants
+             └── screen
+                  └── component
+                  └── widgets
+                  └── ...
+    │   ├── viewmodel         
+    │       └── ...
     └── ...
  
  ## Run project
