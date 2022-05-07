@@ -33,32 +33,6 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => BottomNavigationProvider()),
-        ChangeNotifierProvider(create: (_) => CartViewModel()),
-        ChangeNotifierProvider(create: (_) => AddressViewModel()),
-        ChangeNotifierProvider(
-            create: (_) => ProductViewModel()..getListProduct()),
-        ChangeNotifierProvider(create: (_) => AuthViewModel())
-      ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primarySwatch: kPrimaryColor,
-          primaryColor: Colors.black,
-        ),
-        onGenerateRoute: Routes.onGenerateRouter,
-        home: LoginScreen(),
-      ),
-    );
-  }
-}
-
 ```
 
 
