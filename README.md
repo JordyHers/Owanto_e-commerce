@@ -15,6 +15,18 @@ https://user-images.githubusercontent.com/49708438/167256470-9251f9f9-207d-4d6b-
  Download the files or git clone the repository.
  > git clone 
  
+ 
+## Folder structure 
+
+> the project folder structure is the following:
+
+    .
+    ├── src                    
+    │   ├── benchmarks          # Load and stress tests
+    │   ├── integration         # End-to-end, integration tests (alternatively `e2e`)
+    │   └── unit                # Unit tests
+    └── ...
+ 
  ## Run project
 
 > to run the project follow the following commands 
@@ -25,7 +37,6 @@ https://user-images.githubusercontent.com/49708438/167256470-9251f9f9-207d-4d6b-
 > flutter run 
 
 ```
-
 > The project starts in  **main.dart**.
 
 ```dart
