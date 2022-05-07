@@ -44,31 +44,31 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
           onTap: (int index){
             bottomProvider.changePageTab =index;
           },
-          items: [
+          items: const  [
             BottomNavigationBarItem(
-              title: Container(height: 0),
-              activeIcon: const Icon(Icons.home),
-              icon: const  Icon(Icons.home_outlined,),
+              label: '',
+              activeIcon: Icon(Icons.home),
+              icon: Icon(Icons.home_outlined,),
             ),
             BottomNavigationBarItem(
-              title: Container(height: 0),
-              activeIcon: const Icon(Icons.shopping_cart),
-              icon: const  Icon(Icons.shopping_cart_outlined),
+              label: '',
+              activeIcon: Icon(Icons.shopping_cart),
+              icon: Icon(Icons.shopping_cart_outlined),
             ),
             BottomNavigationBarItem(
-              title: Container(height: 0),
-              activeIcon: const Icon(Icons.shopping_bag),
-              icon: const  Icon(Icons.shopping_bag_outlined),
+              label: '',
+              activeIcon:  Icon(Icons.shopping_bag),
+              icon:  Icon(Icons.shopping_bag_outlined),
             ),
             BottomNavigationBarItem(
-              title: Container(height: 0),
-              activeIcon: const Icon(Icons.favorite),
-              icon: const  Icon(Icons.favorite_outline),
+              label: '',
+              activeIcon:  Icon(Icons.favorite),
+              icon:  Icon(Icons.favorite_outline),
             ),
             BottomNavigationBarItem(
-              title: Container(height: 0),
-              activeIcon: const Icon(Icons.person_rounded),
-              icon: const  Icon(Icons.person_outline_rounded),
+              label: '',
+              activeIcon: Icon(Icons.person_rounded),
+              icon:  Icon(Icons.person_outline_rounded),
             ),
           ],
         ),

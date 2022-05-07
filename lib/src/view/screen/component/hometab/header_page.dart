@@ -4,12 +4,7 @@ import 'package:owanto_app/src/viewmodel/product_viewmodel.dart';
 import 'package:provider/provider.dart';
 
 class HeaderPage extends StatelessWidget {
-  List<String> listImage = [
-    'https://images.pexels.com/photos/2657594/pexels-photo-2657594.jpeg?cs=srgb&dl=pexels-vinicius-altava-2657594.jpg&fm=jpg',
-    'https://images.pexels.com/photos/2657594/pexels-photo-2657594.jpeg?cs=srgb&dl=pexels-vinicius-altava-2657594.jpg&fm=jpg',
-    'https://images.pexels.com/photos/2657594/pexels-photo-2657594.jpeg?cs=srgb&dl=pexels-vinicius-altava-2657594.jpg&fm=jpg',
-    'https://images.pexels.com/photos/2657594/pexels-photo-2657594.jpeg?cs=srgb&dl=pexels-vinicius-altava-2657594.jpg&fm=jpg',
-  ];
+
   @override
   Widget build(BuildContext context) {
     ProductViewModel prductVM = Provider.of(context, listen: false);
@@ -28,12 +23,12 @@ class HeaderPage extends StatelessWidget {
                 builder: (BuildContext context) => Container(
                     height: 400,
                     width: 500,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                     ),
                     child: Image.asset(
                       product.urlImage!.first,
-                      fit: BoxFit.fill,
+                      fit: BoxFit.fitWidth,
                     )),
               ))
           .toList(),

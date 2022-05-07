@@ -11,7 +11,7 @@ class ForgotPassScreen extends StatelessWidget {
         child: Scaffold(
           resizeToAvoidBottomInset: false,
           body: Container(
-            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -19,36 +19,34 @@ class ForgotPassScreen extends StatelessWidget {
                 IconButton(
                     onPressed: () => Navigator.pop(context),
                     alignment: Alignment.topLeft,
-                    padding: EdgeInsets.all(0.0),
-                    icon: Icon(
+
+                    icon: const Icon(
                       Icons.arrow_back_ios_rounded,
                       color: Colors.black,
                       size: 20,
                     )),
-                SizedBox(
-                  height: 15,
-                ),
+
                 Text(
-                  "Forgot password",
+                  "Renouvelez votre mot de passe",
                   style: AppFont.bold.copyWith(
                     color: Colors.black,
-                    fontSize: 32,
+                    fontSize: 19,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * .1,
                 ),
-                Text('Please, enter your email address. You will receive a link to create a new password via email.',style: AppFont.medium.copyWith(
+                Text('Veuillez saisir votre adresse e-mail. Vous recevrez un lien pour créer un nouveau mot de passe par e-mail.',style: AppFont.medium.copyWith(
                   fontSize: 14,
                   fontWeight: FontWeight.normal,
-                ),),
+                ), textAlign: TextAlign.center,),
                 SizedBox(
                   height: 20,
                 ),
                 Container(
                   width: double.infinity,
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(5),
@@ -76,28 +74,30 @@ class ForgotPassScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
-                SizedBox(
-                  width: double.infinity,
-                  height: 45,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: AppColors.primaryColorRed,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(40.0),
+                Center(
+                  child: SizedBox(
+                    width: 300,
+                    height: 45,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: AppColors.primaryColorRed,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
                       ),
-                    ),
-                    onPressed: () {
-                      // authViewModel
-                      //     .login()
-                      //     .then((value) => Navigator.pop(context));
-                    },
-                    child: Text(
-                      "send".toUpperCase(),
-                      style: AppFont.medium
-                          .copyWith(fontSize: 15, color: Colors.white),
+                      onPressed: () {
+                        // authViewModel
+                        //     .login()
+                        //     .then((value) => Navigator.pop(context));
+                      },
+                      child: Text(
+                        "envoyer".toUpperCase(),
+                        style: AppFont.medium
+                            .copyWith(fontSize: 15, color: Colors.white),
+                      ),
                     ),
                   ),
                 ),

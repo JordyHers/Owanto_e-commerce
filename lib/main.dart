@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          primarySwatch: kPrimaryColor,
+          primarySwatch: buildMaterialColor(Colors.cyan.shade800),
           primaryColor: Colors.black,
         ),
         onGenerateRoute: Routes.onGenerateRouter,
