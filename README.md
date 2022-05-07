@@ -1,12 +1,11 @@
-# owanto_app
+# Owanto'o
 
-A new Flutter project.
+owanto is a e-commerce platform template This project only contains the front end part and is not connected to a
+database. The state management has been implemented and login,sign up, checkout pages implemented.
 
-## Getting Started
+## 1.Download the repository 
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
+ Download the files or git clone the repository.
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
