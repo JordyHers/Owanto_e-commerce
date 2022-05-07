@@ -6,10 +6,22 @@ database. The state management has been implemented and login,sign up, checkout 
 ## 1.Download the repository 
 
  Download the files or git clone the repository.
+ > git clone 
+ 
+ ## Run project
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+> to run the project follow the following commands 
+ 
+```dart
+> flutter pub get
+> flutter clean 
+> flutter run 
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+
+> The project starts in  **main.dart**.
+
+```dart
+
+
+```
