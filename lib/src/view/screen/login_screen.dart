@@ -33,13 +33,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 IconButton(
                     onPressed: () => Navigator.pop(context),
                     alignment: Alignment.topLeft,
-                    padding: EdgeInsets.all(0.0),
-                    icon: Icon(
+                    padding: const EdgeInsets.all(0.0),
+                    icon: const Icon(
                       Icons.arrow_back_ios_rounded,
                       color: Colors.black,
                       size: 20,
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Center(
@@ -54,14 +54,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
 
                 SizedBox(
-                  height: 55,
+                  height: MediaQuery.of(context).size.height * .15,
                 ),
 
                 // TextFieldAddress(vi
                 //     textEditingController: emailController, lableText: "Email"),
                 Container(
                   width: double.infinity,
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(5),
@@ -88,8 +88,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
 
-                SizedBox(
-                  height: 10,
+                const   SizedBox(
+                  height: 10
                 ),
                 Container(
                   width: double.infinity,
@@ -124,7 +124,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             size: 16,
                           )),
                       alignLabelWithHint: true,
-                      // center labastyle
+
                       labelStyle: AppFont.regular.copyWith(
                         fontSize: 13,
                         color: Colors.grey,
@@ -133,7 +133,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
                 GestureDetector(
