@@ -24,12 +24,12 @@ https://user-images.githubusercontent.com/49708438/167256470-9251f9f9-207d-4d6b-
     ├── src                    
     │   ├── const               # contains all the constants
              └── ...
-    │   ├── data               # contains all the constants
+    │   ├── data               # data layer 
              └── model
              └── service
-    │   ├── router               # contains all the constants
+    │   ├── router               # navigation 2.0
              └── ...
-    │   ├── view               # contains all the constants
+    │   ├── view               # pages and screens
              └── screen
                   └── component
                   └── widgets
